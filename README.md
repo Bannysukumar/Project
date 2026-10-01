@@ -1,54 +1,54 @@
-# HES SLA Dashboard
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-A modern, responsive dashboard application built with Next.js 14, TypeScript, and Ant Design for monitoring and managing SLA metrics.
+# SLA Dashboard
 
-[![License](https://img.shields.io/github/license/Bannysukumar/Project)](https://github.com/Bannysukumar/Project/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/Project)](https://github.com/Bannysukumar/Project/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/Project)](https://github.com/Bannysukumar/Project/commits/main)
+SLA Dashboard is a Next.js 14 application. The npm package name is `sla-dashboard`. The menu in `app/lib/constants.ts` lists Home, Meter List, Data Push, Data Pull, Commands, Reports, Admin, and API. Charts use sample values in that same file.
 
 ## Overview
 
-A modern, responsive dashboard application built with Next.js 14, TypeScript, and Ant Design for monitoring and managing SLA metrics.
+The UI dependencies are Ant Design, Ant Design icons, and Recharts. Routes include `app/page.tsx` and `app/dashboard/page.tsx`. `LIVE_INTERVAL_DATA` in `constants.ts` is hard-coded chart data, not a live meter feed. The recorded homepage is https://project-seven-ashy-32.vercel.app.
 
-
-What is actually in the repository: `app/`. GitHub reports the primary language as CSS.
-
-Published site recorded on the repository: https://project-seven-ashy-32.vercel.app
+The repository name is `Project`. This README uses SLA Dashboard because that is the package name and the menu is about meter data push and pull.
 
 ## Features
 
-
-- Responsive Design: Mobile-first approach with adaptive sidebar
-- Real-time Metrics: Live data visualization with charts
-- Export Functionality: CSV export for data analysis
-- AI Assistant: Integrated copilot widget for user assistance
-- Type Safety: Full TypeScript support with proper type definitions
-- Dashboard page
+- Menu entries for meter list, data push, data pull, commands, reports, admin, and API
+- Dashboard route `app/dashboard/page.tsx`
+- Sample live-interval chart data in `app/lib/constants.ts`
+- Ant Design and Recharts dependencies
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| Next.js | React framework |
-| React | User interface |
-| Ant Design | Dashboard UI components |
-| Recharts | Charts |
+| Next.js 14.0.4 | `package.json` and `next.config.js` |
+| React 18 | `package.json` |
+| TypeScript | `tsconfig.json` |
+| Ant Design | `antd` dependency |
+| Recharts | `recharts` dependency |
 
-## Project Architecture
+## Architecture
 
-Next.js App Router project. Pages live under app/.
+Next.js App Router → dashboard and home routes → chart data defined in `app/lib/constants.ts`.
 
 ## Project Structure
 
 ```text
 Project/
-├── app/
-├── next-env.d.ts
+├── app/page.tsx
+├── app/dashboard/page.tsx
+├── app/lib/constants.ts
+├── app/components/
 ├── next.config.js
-├── package-lock.json
-├── package.json
-├── tsconfig.json
+└── package.json
 ```
 
-## Getting Started
+## Prerequisites
+
+- Node.js
+- npm
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/Project.git
@@ -57,16 +57,15 @@ npm install
 npm run dev
 ```
 
-Scripts defined in package.json:
+`npm run dev` runs `next dev`.
 
-- `npm run dev` — `next dev`
-- `npm run build` — `next build`
-- `npm run start` — `next start`
-- `npm run lint` — `next lint`
+## Usage
 
-## Deployment
+Open the home page for the menu, then `app/dashboard` for the dashboard. Data Push and Data Pull are menu labels. The interval chart currently reads `LIVE_INTERVAL_DATA` from constants.
 
-- The repository homepage is https://project-seven-ashy-32.vercel.app.
+## Demo
+
+https://project-seven-ashy-32.vercel.app
 
 ## Contributing
 
@@ -78,8 +77,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
